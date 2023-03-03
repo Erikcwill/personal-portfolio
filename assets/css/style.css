@@ -1,0 +1,21 @@
+body {
+  background: rgb(0,10,23);
+  background: radial-gradient(circle, rgba(0,10,23,1) 0%, rgba(0,10,26,1) 100%);
+}
+
+.animation-container {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh;
+  text-align: center;
+}
+
+p {
+  font-family: 'Big Shoulders Inline Text', cursive;  
+  color: #ffffff;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 48px;  
+}

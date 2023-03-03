@@ -1,0 +1,138 @@
+#animation-phrase-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out forwards, fadeOut 1s ease-in-out 3s forwards;
+  -webkit-box-reflect: below 0 linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+}
+
+#animation-phrase-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  font-weight: bold;
+  animation: fadeInDelay 1s ease-in-out 4s forwards,
+    fadeOut 1s ease-in-out 7s forwards;
+  -webkit-box-reflect: below 0 linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+}
+
+#animation-phrase-3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-weight: bold;
+  animation: fadeInDelay 1s ease-in-out 8s forwards,
+    fadeOut 1s ease-in-out 11s forwards;
+  -webkit-box-reflect: below 0 linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDelay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutDelay {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+#circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-image: url("/assets/imgs/eu1.png");
+    background-size: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: expandCircle 3s ease-in-out forwards 11s;
+    z-index: 1;
+  }
+  
+  @keyframes expandCircle {
+    0% {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 400px;
+      height: 400px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @keyframes fadeOutDelay {
+    0% {
+      opacity: 1;
+    }
+    99% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(100);
+    }
+  }
+  
+  .spiral-animation {
+    animation-name: spiral;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes spiral {
+    0% {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    50% {
+        transform: translateX(100px) translateY(100px) scale(0.5);
+    }
+    100% {
+        transform: translateX(200px) translateY(200px) scale(0.2);
+    }
+}
